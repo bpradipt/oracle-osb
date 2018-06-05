@@ -1,0 +1,12 @@
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: create-oracle-table-instance
+spec:
+  clusterServiceClassExternalName: create-oracle-table
+  clusterServicePlanExternalName: default
+  parameters:
+    dbusername: PKB1
+    dbpassword: password
+    tablename: person
+    tableschema: 'PersonID int, LastName varchar(255)' 
