@@ -1,0 +1,18 @@
+# Default values for the oracle-osb
+# Image to use
+image: servicebroker:latest
+# ImagePullPolicy; valid values are "IfNotPresent", "Never", and "Always"
+imagePullPolicy: IfNotPresent
+authenticate: true
+# Certificate details to use for TLS. Leave blank to not use TLS
+tls:
+  # base-64 encoded PEM data for the TLS certificate
+  cert:
+  # base-64 encoded PEM data for the private key matching the certificate
+  key:
+deployClusterServiceBroker: true
+# Database Access Params
+database:
+   ConnStr:
+   Host:
+   Port: 1521
